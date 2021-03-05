@@ -61,6 +61,7 @@ const TokenItem = (props: TokenItemProps) => {
           </div>
         </div>
       </li>
+
       {showEditModal && (
         <Modal
           modalTitle={t("Edit Token") as string}

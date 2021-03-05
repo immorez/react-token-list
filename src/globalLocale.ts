@@ -30,6 +30,7 @@ export const globalLocale = {
       Price: "قیمت",
       Symbol: "نماد",
       Quantity: "تعداد",
+      "My Balance": "دارایی من",
     },
   },
 };
