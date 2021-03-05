@@ -1,12 +1,51 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { useCallback, useState } from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./styles/index.css";
+import { LanguageContext } from "./shared/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
+import "./locale";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Index: React.FC = () => {
+  const { i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(true);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  // This function only handles two languages.
+  const toggleLanguage = useCallback(() => {
+    if (!isRTL) {
+      i18n.changeLanguage("fa_IR");
+      setIsRTL(true);
+    } else {
+      i18n.changeLanguage("en_US");
+      setIsRTL(false);
+    }
+  }, [i18n, isRTL]);
+
+  const setRTL = useCallback(() => {
+    setIsRTL(true);
+  }, []);
+
+  const setLTR = useCallback(() => {
+    setIsRTL(false);
+  }, []);
+
+  return (
+    <React.StrictMode>
+      <LanguageContext.Provider
+        value={{
+          toggleLanguage: toggleLanguage,
+          isRTL: isRTL,
+          setRTL: setRTL,
+          setLTR: setLTR,
+        }}
+      >
+        <Router>
+          <App />
+        </Router>
+      </LanguageContext.Provider>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(<Index />, document.getElementById("root"));

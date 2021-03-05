@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.9.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
@@ -12,13 +13,20 @@
     "@types/react-dom": "^17.0.1",
     "autoprefixer": "10.x",
     "cross-env": "7.x",
+    "framer-motion": "^3.10.0",
+    "i18next": "^19.9.1",
     "npm-run-all": "4.x",
     "postcss": "8.x",
     "postcss-cli": "8.x",
     "postcss-preset-env": "6.x",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-i18next": "^11.8.8",
+    "react-icons": "^4.2.0",
+    "react-popper": "^2.2.4",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-spinners": "^0.10.6",
     "tailwindcss": "2.x",
     "typescript": "4.x"
   },
@@ -46,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss-dir": "^4.0.0"
   }
 }
