@@ -80,10 +80,12 @@ const TokenList = (props: TokenListProps) => {
   };
 
   return (
-    <div className="flex flex-col w-1/3">
+    <div className="flex flex-col md:w-1/3 w-full">
       <div className="flex flex-wrap w-full justify-between p-2">
-        <span className="text-xl font-light my-auto">{t("My Balance")}</span>
-        <span className="text-5xl font-semibold my-auto py-2">
+        <span className="md:text-xl text-sm font-light my-auto">
+          {t("My Balance")}
+        </span>
+        <span className="md:text-5xl text-xl font-semibold my-auto py-2">
           ${Number(total).toLocaleString(isRTL ? "fa-IR" : "en-US")}
         </span>
       </div>

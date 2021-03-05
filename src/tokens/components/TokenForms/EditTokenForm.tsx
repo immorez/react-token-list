@@ -74,7 +74,7 @@ const EditTokenModal = (props: EditTokenModalProps) => {
     [formState.inputs, editToken, id, closeEditModal]
   );
   return (
-    <form id="edit-token-form" className="p-4" onSubmit={submitEditTokenForm}>
+    <form id="edit-token-form" className="p-2" onSubmit={submitEditTokenForm}>
       <Input
         element="input"
         id="tokenName"

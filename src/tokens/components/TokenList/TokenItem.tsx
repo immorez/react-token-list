@@ -33,8 +33,8 @@ const TokenItem = (props: TokenItemProps) => {
       <li className="p-2 bg-white rounded-lg shadow-lg w-full hover:bg-gray-100 cursor-pointer">
         <div className="flex flex-row p-2 justify-between">
           <div className="w-2/3 flex flex-col justify-between">
-            <h3 className="font-bold text-gray-800 text-2xl flex flex-row">
-              <FaCoins className="my-auto mr-1 mt-1 text-xl text-orange-500" />
+            <h3 className="font-bold text-gray-800 md:text-2xl text-xl flex flex-row">
+              <FaCoins className="my-auto mr-1 mt-1 md:text-xl text-lg text-orange-500" />
               {name}
             </h3>
             <h5 className="font-thin text-gray-600 text-sm uppercase">
@@ -42,7 +42,7 @@ const TokenItem = (props: TokenItemProps) => {
             </h5>
           </div>
           <div className="w-1/3 flex flex-col justify-between">
-            <span className="font-normal text-2xl text-gray-700 ml-auto">
+            <span className="font-normal md:text-2xl text-lg text-gray-700 ml-auto">
               ${Number(price).toLocaleString("en-US")}
             </span>
             <span className="font-normal text-sm text-gray-400 ml-auto uppercase">
