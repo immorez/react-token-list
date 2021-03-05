@@ -2,6 +2,7 @@
 
 A simple token & cryptocurrency tracker made with Typescript, React & Tailwindcss + some framer motions.
 
+You can see a demo of this application [here](https://retoken.vercel.app).
 # cra-template-tailwindcss-typescript
 
 A streamlined [Tailwind CSS](https://tailwindcss.com) template for [Create React App](https://github.com/facebook/create-react-app) in [TypeScript](https://www.typescriptlang.org/).
